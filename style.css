@@ -1,3 +1,4 @@
+
 :root{
     --dark-body:#4d4c5a;
     --dark-main:#141529;
@@ -84,6 +85,7 @@ html,body{
     display: grid;
     grid-template-columns: repeat(7,1fr);
     font-weight: 600;
+    height: 50px;
 }
 
 .calendar-week-day div{
@@ -175,3 +177,74 @@ html,body{
     left: 2px;
     transition: left 0.2s ease-in-out;
 }
+
+.dark .dark-mode-switch .dark-mode-switch-ident{
+    top: 2px;
+    left: calc(2px + 50%);
+}
+
+
+.calendar-days div span{
+    position: absolute;
+}
+
+.calendar-days div:hover span{
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.calendar-days div span:nth-child(1),
+.calendar-days div span:nth-child(3){
+    width: 2px;
+    height: 0;
+    background-color: var(--color-txt);
+}
+
+.calendar-days div:hover span:nth-child(1),
+.calendar-days div:hover span:nth-child(3){
+    height: 100%;
+}
+
+.calendar-days div span:nth-child(1){
+    bottom: 0;
+    left: 0;
+}
+
+.calendar-days div span:nth-child(3){
+    top: 0;
+    right: 0;
+}
+
+.calendar-days div span:nth-child(2),
+.calendar-days div span:nth-child(4){
+    width: 0;
+    height: 2px;
+    background-color: var(--color-txt);
+}
+
+.calendar-days div:hover span:nth-child(2),
+.calendar-days div:hover span:nth-child(4){
+    width: 100%;
+}
+
+.calendar-days div span:nth-child(2){
+    top: 0;
+    left: 0;
+}
+
+.calendar-days div span:nth-child(4){
+    bottom: 0;
+    right: 0;
+}
+
+.calendar-days div:hover span:nth-child(2){
+    transition-delay: 0.2s;
+}
+
+.calendar-days div:hover span:nth-child(3){
+    transition-delay: 0.3s;
+}
+
+.calendar-days div:hover span:nth-child(4){
+    transition-delay: 0.4s;
+}
+
