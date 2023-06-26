@@ -17,13 +17,14 @@ getFebDays = (year) => {
 
 let calendar = document.querySelector('.calendar')
 
-const month_names =['January','February','March','April','May','June','July','August','Septemper','October','November','December']
+const month_names =['January','February','March','April','May','June','July','August','September','October','November','December']
 
 let month_picker=document.querySelector("#month-picker")
 //genearte calendar
 
 month_picker.onclick=()=>{
     month_list.classList.add('show')
+
 }
 
 generateCalendar=(month,year) =>{
@@ -60,9 +61,24 @@ let month_list = calendar.querySelector('.month-list')
 
 month_names.forEach((e,index)=>{
     let month=document.createElement('div')
-    month.innerHTML='<div>${e}</div>'
+    month.innerHTML=`<div data-month="${index}">${e}</div>`
+    month.onclick=()=>{
+        month_list.classList.remove('show')
+        curr_month.value=index
+        generateCalendar(curr_month.value,curr_year.value)
+    }
     month_list.appendChild(month)
 })
+
+document.querySelector('#prev-year').onclick=()=>{
+    --curr_year.value;
+    generateCalendar(curr_month.value,curr_year.value)
+}
+
+document.querySelector('#next-year').onclick=()=>{
+    ++curr_year.value;
+    generateCalendar(curr_month.value,curr_year.value)
+}
 
 let currDate= new Date()
 

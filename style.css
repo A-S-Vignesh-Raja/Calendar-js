@@ -257,3 +257,44 @@ html,body{
 .calendar-days div.curr-date span{
     display: none;
 }
+
+.month-list{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-main);
+    padding: 20px;
+    color: var(--color-txt);
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 5px;
+    transform: scale(1.5);
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.month-list.show{
+    visibility: visible;
+    pointer-events: visible;
+    transform: scale(1);
+}
+
+.month-list > div{
+    display: grid;
+    place-items: center;
+}
+
+.month-list >div >div{
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.month-list >div >div:hover{
+    background-color: var(--color-hover);
+}
