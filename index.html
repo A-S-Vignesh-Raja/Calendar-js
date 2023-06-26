@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <title>Calendar</title>
 </head>
+
 <body class="light">
+
     <div class="calendar">
         <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                June
-            </span>
+            <span class="month-picker" id="month-picker">June</span>
             <div class="year-picker">
                 <span class="year-change" id="prev-year">
-                    <pre> < </pre>
+                    <pre><</pre>
                 </span>
-                <span class="year">2023</span>
+                <span id="year">2023</span>
                 <span class="year-change" id="next-year">
-                    <pre> > </pre>
+                    <pre>></pre>
                 </span>
             </div>
         </div>
-
         <div class="calendar-body">
             <div class="calendar-week-day">
                 <div>Sun</div>
@@ -33,32 +33,8 @@
                 <div>Fri</div>
                 <div>Sat</div>
             </div>
-            <div class="calendar-days">
-                <div>
-                    1
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                
-
-            </div>
+            <div class="calendar-days"></div>
         </div>
-
         <div class="calendar-footer">
             <div class="toggle">
                 <span>Dark Mode</span>
@@ -67,7 +43,6 @@
                 </div>
             </div>
         </div>
-
         <div class="month-list"></div>
     </div>
 
