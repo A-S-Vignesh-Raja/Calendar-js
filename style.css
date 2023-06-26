@@ -248,3 +248,12 @@ html,body{
     transition-delay: 0.4s;
 }
 
+.calendar-days div.curr-date{
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
+}
+
+.calendar-days div.curr-date span{
+    display: none;
+}

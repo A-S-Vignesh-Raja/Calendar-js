@@ -22,6 +22,10 @@ const month_names =['January','February','March','April','May','June','July','Au
 let month_picker=document.querySelector("#month-picker")
 //genearte calendar
 
+month_picker.onclick=()=>{
+    month_list.classList.add('show')
+}
+
 generateCalendar=(month,year) =>{
     let calendar_days=document.querySelector(".calendar-days")
     calendar_days.innerHTML=' '
@@ -51,6 +55,14 @@ generateCalendar=(month,year) =>{
         calendar_days.appendChild(day)
     }
 }
+
+let month_list = calendar.querySelector('.month-list')
+
+month_names.forEach((e,index)=>{
+    let month=document.createElement('div')
+    month.innerHTML='<div>${e}</div>'
+    month_list.appendChild(month)
+})
 
 let currDate= new Date()
 
